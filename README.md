@@ -15,6 +15,17 @@ brew install neovim
 
 https://www.lunarvim.org/docs/installation
 
+## Yabai and SKHD
+
+https://www.josean.com/posts/yabai-setup
+```
+brew install koekeishiya/formulae/yabai
+brew install koekeishiya/formulae/skhd
+
+brew services start yabai
+brew services start skhd
+```
+
 ## Copy dotfiles
 
 Run inside the directory
