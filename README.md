@@ -4,6 +4,18 @@
 
 📹 Youtube Playlist With Detailed Walkthroughs on My Setup: [💻 My Dev Environment & Workflow](https://youtube.com/playlist?list=PLnu5gT9QrFg36OehOdECFvxFFeMHhb_07)
 
+# Installing
+
+```bash
+brew install stow
+```
+
+Then inside the dotfiles directory
+
+```bash
+stow .
+```
+
 # Terminal Setup
 
 After recommendations from you guys, I've swapped out Alacritty for [WezTerm](https://wezfurlong.org/wezterm/index.html)!
