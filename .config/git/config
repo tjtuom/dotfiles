@@ -1,0 +1,12 @@
+# This is Git's per-user configuration file.
+[user]
+# Please adapt and uncomment the following lines:
+	name = Toni Tuominen
+	email = toni@tuominen.co
+[alias]
+	st = status
+	a = add
+	unstage = reset HEAD --
+	ci = commit
+[core]
+	editor = nvim
