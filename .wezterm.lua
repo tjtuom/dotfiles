@@ -28,5 +28,19 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 0.75
 config.macos_window_background_blur = 10
 
+-- Vim bindings
+config.keys = {
+	{
+		mods = "CMD",
+		key = "s",
+		action = wezterm.action.SendString(":w\x0d"),
+	},
+	{
+		mods = "CMD",
+		key = "q",
+		action = wezterm.action.SendString(":q\x0d"),
+	},
+}
+
 -- and finally, return the configuration to wezterm
 return config
