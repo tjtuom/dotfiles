@@ -109,6 +109,24 @@ return {
           },
         })
       end,
+      ["elixirls"] = function()
+        lspconfig["elixirls"].setup({
+          capabilities = capabilities,
+          cmd = { "elixir-ls" },
+        })
+      end,
+      ["lexical"] = function()
+        lspconfig["lexical"].setup({
+          capabilities = capabilities,
+          cmd = { "lexical" },
+        })
+      end,
+      ["nextls"] = function()
+        lspconfig["nextls"].setup({
+          capabilities = capabilities,
+          cmd = { "nextls" },
+        })
+      end,
     })
   end,
 }

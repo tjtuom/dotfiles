@@ -36,6 +36,8 @@ return {
         "pyright",
         "dockerls",
         "docker_compose_language_service",
+        "elixirls",
+        "lexical",
       },
     })
 
