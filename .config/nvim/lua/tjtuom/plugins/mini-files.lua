@@ -10,6 +10,7 @@ return {
       go_out_plus = "h",
       reset = ",",
       show_help = "g?",
+      synchronize = "s",
     },
   },
   keys = {
