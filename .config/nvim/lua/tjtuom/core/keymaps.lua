@@ -7,6 +7,8 @@ keymap.set("i", "jk", "<ESC>", { desc = "Exit insert mode with jk" })
 
 keymap.set("n", "<esc>", "<cmd>noh<cr><esc>", { silent = true })
 
+keymap.set({ "n", "i" }, "\x03", "<cmd>w<CR>", { desc = "Terminal compatibility to save with cmd-s" })
+keymap.set({ "n", "i" }, "\x04", "<esc><cmd>q<CR>", { desc = "Terminal compatibility to quit with cmd-q" })
 -- increment/decrement numbers
 keymap.set("n", "<leader>+", "<C-a>", { desc = "Increment number" }) -- increment
 keymap.set("n", "<leader>-", "<C-x>", { desc = "Decrement number" }) -- decrement

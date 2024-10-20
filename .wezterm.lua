@@ -33,12 +33,12 @@ config.keys = {
 	{
 		mods = "CMD",
 		key = "s",
-		action = wezterm.action.SendString("\x1b:w\x0d"),
+		action = wezterm.action.SendString("\x03"),
 	},
 	{
 		mods = "CMD",
 		key = "q",
-		action = wezterm.action.SendString("\x1b:q\x0d"),
+		action = wezterm.action.SendString("\x04"),
 	},
 }
 
