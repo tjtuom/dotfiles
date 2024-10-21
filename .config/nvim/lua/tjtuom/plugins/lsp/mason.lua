@@ -31,7 +31,7 @@ return {
         "cssls",
         "tailwindcss",
         "lua_ls",
-        "emmet_ls",
+        "emmet_language_server",
         "ts_ls",
         "pyright",
         "dockerls",
@@ -48,6 +48,8 @@ return {
         "isort", -- python
         "black", -- python,
         "pylint",
+        "eslint_d",
+        "biome",
       },
     })
   end,

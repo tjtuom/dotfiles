@@ -36,5 +36,10 @@ return {
       end,
       desc = "Run file test",
     },
+    {
+      "<localleader>ts",
+      "<cmd>OpenLatestWallabyScreenshot<CR>",
+      desc = "Open latest screenshot",
+    },
   },
 }

@@ -85,11 +85,18 @@ return {
           capabilities = capabilities,
         })
       end,
-      ["emmet_ls"] = function()
+      ["emmet_language_server"] = function()
         -- configure emmet language server
-        lspconfig["emmet_ls"].setup({
+        lspconfig["emmet_language_server"].setup({
           capabilities = capabilities,
-          filetypes = { "html", "css", "sass", "scss", "less" },
+          filetypes = { "html", "css", "sass", "scss", "less", "elixir", "heex" },
+        })
+      end,
+      ["tailwindcss"] = function()
+        -- configure emmet language server
+        lspconfig["tailwindcss"].setup({
+          capabilities = capabilities,
+          filetypes = { "html", "css", "sass", "scss", "less", "elixir", "heex" },
         })
       end,
       ["lua_ls"] = function()
@@ -119,12 +126,6 @@ return {
         lspconfig["lexical"].setup({
           capabilities = capabilities,
           cmd = { "lexical" },
-        })
-      end,
-      ["nextls"] = function()
-        lspconfig["nextls"].setup({
-          capabilities = capabilities,
-          cmd = { "nextls" },
         })
       end,
     })
