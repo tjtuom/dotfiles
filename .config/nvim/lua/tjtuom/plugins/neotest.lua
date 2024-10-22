@@ -12,9 +12,35 @@ return {
       adapters = {
         require("neotest-elixir"),
       },
+      output = { open_on_run = true },
     })
   end,
   keys = {
+    {
+      "<localleader>t",
+      group = "Testing",
+    },
+    {
+      "<localleader>to",
+      function()
+        require("neotest").output.open({ enter = true, auto_close = true })
+      end,
+      desc = "Show neotest output",
+    },
+    {
+      "<localleader>tO",
+      function()
+        require("neotest").output_panel.toggle()
+      end,
+      desc = "Show neotest output panel",
+    },
+    {
+      "<localleader>ts",
+      function()
+        require("neotest").summary.toggle()
+      end,
+      desc = "Show neotest summary",
+    },
     {
       "<localleader>tt",
       function()
@@ -30,6 +56,13 @@ return {
       desc = "Run nearest test",
     },
     {
+      "<localleader>tS",
+      function()
+        require("neotest").run.stop()
+      end,
+      desc = "Stop tests",
+    },
+    {
       "<localleader>tf",
       function()
         require("neotest").run.run(vim.fn.expand("%"))
@@ -37,7 +70,14 @@ return {
       desc = "Run file test",
     },
     {
-      "<localleader>ts",
+      "<localleader>tF",
+      function()
+        require("neotest").run.run(vim.uv.cwd())
+      end,
+      desc = "Run all tests",
+    },
+    {
+      "<localleader>tw",
       "<cmd>OpenLatestWallabyScreenshot<CR>",
       desc = "Open latest screenshot",
     },
