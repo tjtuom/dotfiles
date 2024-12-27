@@ -23,4 +23,4 @@ keymap.set("n", "<leader>sx", "<cmd>close<CR>", { desc = "Close current split" }
 -- buffer management --
 
 keymap.set("n", "<leader>bb", "<cmd>:b#<CR>", { desc = "Change to last open buffer" })
-keymap.set("n", "<leader>bd", "<cmd>:bdelete<CR>", { desc = "Kill the current buffer" })
+keymap.set("n", "<leader>bd", "<cmd>:CloseCurrentBuffer<CR>", { desc = "Kill the current buffer" })
