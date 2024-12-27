@@ -6,11 +6,23 @@ return {
     "antoinemadec/FixCursorHold.nvim",
     "nvim-treesitter/nvim-treesitter",
     "jfpedroza/neotest-elixir",
+    "mfussenegger/nvim-dap",
+    "nvim-neotest/neotest-jest",
   },
   config = function()
     require("neotest").setup({
       adapters = {
         require("neotest-elixir"),
+        require("neotest-jest")({
+          jestCommand = "npm test --",
+          jestConfigFile = function(file)
+            return "assets/jest.config.ts"
+          end,
+          env = { CI = true },
+          cwd = function(path)
+            return vim.fn.getcwd() .. "/assets"
+          end,
+        }),
       },
       output = { open_on_run = true },
     })
@@ -54,6 +66,20 @@ return {
         require("neotest").run.run()
       end,
       desc = "Run nearest test",
+    },
+    {
+      "<localleader>td",
+      function()
+        require("neotest").run.run({ strategy = "dap" })
+      end,
+      desc = "Debug Nearest",
+    },
+    {
+      "<localleader>tm",
+      function()
+        require("neotest").summary.run_marked()
+      end,
+      desc = "Run marked tests",
     },
     {
       "<localleader>tS",
